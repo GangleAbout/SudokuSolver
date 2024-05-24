@@ -9,4 +9,13 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty] private string _windowTitle = "Sudoku Solver";
     [ObservableProperty] private int _widowWidth = 800;
     [ObservableProperty] private int _widowHeight = 700;
+    
+    
+    [ObservableProperty] private bool _isPaneOpen;
+
+    [RelayCommand]
+    private void TogglePane()
+    {
+        IsPaneOpen = !IsPaneOpen;
+    }
 }

@@ -12,5 +12,45 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainViewModel />
     </Design.DataContext>
-    
+
+    <UserControl.Styles>
+        <StyleInclude Source="../Assets/Styles/SplitViewToggleButtonStyle.axaml" />
+    </UserControl.Styles>
+
+    <SplitView IsPaneOpen="{Binding IsPaneOpen}"
+               OpenPaneLength="300"
+               CompactPaneLength="48"
+               DisplayMode="CompactInline"
+               Background="#1c1c1c"
+               PaneBackground="#1c1c1c">
+        <SplitView.Pane>
+            <Border CornerRadius="10"
+                    Background="#2b2b2b">
+                <StackPanel Orientation="Vertical"
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Top">
+                    <ToggleButton IsChecked="False"
+                                  Command="{Binding TogglePaneCommand}"
+                                  Margin="5"
+                                  CornerRadius="7"
+                                  HorizontalAlignment="Left">
+                        <Panel>
+                            <PathIcon Classes="Default"
+                                      Data="{StaticResource line_horizontal_3_regular}" />
+                            <PathIcon Classes="CompactedPointerOver"
+                                      Data="{StaticResource pane_open_regular}" />
+                            <PathIcon Classes="ExtendedPointerOver"
+                                      Data="{StaticResource pane_close_regular}" />
+                        </Panel>
+                    </ToggleButton>
+                </StackPanel>
+            </Border>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Border CornerRadius="7"
+                    Background="#262626">
+            </Border>
+        </SplitView.Content>
+    </SplitView>
+
 </UserControl>
