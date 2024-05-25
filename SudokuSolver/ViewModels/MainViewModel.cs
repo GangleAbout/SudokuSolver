@@ -32,6 +32,11 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty] private bool _isPaneOpen;
 
     /// <summary>
+    ///     Selected ListItem index in ListBox
+    /// </summary>
+    [ObservableProperty] private int _selectedItemIndex;
+
+    /// <summary>
     ///     Selected ListItem in ListBox
     /// </summary>
     [ObservableProperty] private ListItemTemplate? _selectedListItem;
@@ -51,6 +56,9 @@ public partial class MainViewModel : ViewModelBase
     /// </summary>
     [ObservableProperty] private string _windowTitle = "Sudoku Solver";
 
+    /// <summary>
+    ///     ObservableCollection of ListBox items
+    /// </summary>
     public ObservableCollection<ListItemTemplate> Items { get; } = new(ItemTemplates);
 
     /// <summary>

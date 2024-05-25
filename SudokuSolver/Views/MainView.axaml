@@ -46,7 +46,9 @@
                         </Panel>
                     </ToggleButton>
                     <ListBox ItemsSource="{Binding Items}"
-                             SelectedItem="{Binding SelectedListItem}">
+                             SelectedItem="{Binding SelectedListItem}"
+                             SelectionMode="Single"
+                             SelectedIndex="{Binding SelectedItemIndex, Mode=TwoWay}">
                         <ListBox.ItemTemplate>
                             <DataTemplate DataType="{x:Type templates:ListItemTemplate}">
                                 <StackPanel Margin="2,5,2,5"
