@@ -1,6 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:vm="using:SudokuSolver.ViewModels"
+             xmlns:templates="clr-namespace:SudokuSolver.Templates"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
@@ -18,7 +19,7 @@
     </UserControl.Styles>
 
     <SplitView IsPaneOpen="{Binding IsPaneOpen}"
-               OpenPaneLength="300"
+               OpenPaneLength="180"
                CompactPaneLength="48"
                DisplayMode="CompactInline"
                Background="#1c1c1c"
@@ -28,7 +29,8 @@
                     Background="#2b2b2b">
                 <StackPanel Orientation="Vertical"
                             HorizontalAlignment="Stretch"
-                            VerticalAlignment="Top">
+                            VerticalAlignment="Top"
+                            Spacing="5">
                     <ToggleButton IsChecked="False"
                                   Command="{Binding TogglePaneCommand}"
                                   Margin="5"
@@ -36,19 +38,35 @@
                                   HorizontalAlignment="Left">
                         <Panel>
                             <PathIcon Classes="Default"
-                                      Data="{StaticResource line_horizontal_3_regular}" />
+                                      Data="{StaticResource LineHorizontal3Regular}" />
                             <PathIcon Classes="CompactedPointerOver"
-                                      Data="{StaticResource pane_open_regular}" />
+                                      Data="{StaticResource PaneOpenRegular}" />
                             <PathIcon Classes="ExtendedPointerOver"
-                                      Data="{StaticResource pane_close_regular}" />
+                                      Data="{StaticResource PaneCloseRegular}" />
                         </Panel>
                     </ToggleButton>
+                    <ListBox ItemsSource="{Binding Items}"
+                             SelectedItem="{Binding SelectedListItem}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate DataType="{x:Type templates:ListItemTemplate}">
+                                <StackPanel Margin="2,5,2,5"
+                                            Spacing="15"
+                                            Orientation="Horizontal">
+                                    <PathIcon Data="{Binding Icon}" />
+                                    <TextBlock Text="{Binding Label}"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </StackPanel>
             </Border>
         </SplitView.Pane>
         <SplitView.Content>
             <Border CornerRadius="7"
                     Background="#262626">
+                <TransitioningContentControl Content="{Binding CurrentPage}" />
             </Border>
         </SplitView.Content>
     </SplitView>

@@ -6,8 +6,13 @@
         <entry key="SudokuSolver/App.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Assets/Icons/Icons.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Assets/Styles/SplitViewToggleButtonStyle.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Views/HomeView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Views/MainView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Views/MainWindow.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Views/Pages/AboutView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Views/Pages/AutomaticInputView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Views/Pages/HomeView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Views/Pages/ManualInputView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
       </map>
     </option>
   </component>
