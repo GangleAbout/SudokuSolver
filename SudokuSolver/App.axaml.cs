@@ -7,7 +7,7 @@ using SudokuSolver.Views;
 
 namespace SudokuSolver;
 
-public class App : Application
+public partial class App : Application
 {
     public override void Initialize()
     {
