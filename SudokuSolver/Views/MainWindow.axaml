@@ -1,18 +1,18 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:SudokuSolver.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:v="clr-namespace:SudokuSolver.Views"
+        xmlns:views="clr-namespace:SudokuSolver.Views"
+        xmlns:viewModels="using:SudokuSolver.ViewModels"
         mc:Ignorable="d" d:DesignWidth="{Binding WidowWidth}" d:DesignHeight="{Binding WidowHeight}"
         x:Class="SudokuSolver.Views.MainWindow"
-        x:DataType="vm:MainViewModel"
+        x:DataType="viewModels:MainViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="{Binding WindowTitle}"
         WindowStartupLocation="CenterScreen"
         Width="{Binding WidowWidth}"
         Height="{Binding WidowHeight}">
 
-    <v:MainView />
+    <views:MainView />
 
 </Window>

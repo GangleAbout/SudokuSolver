@@ -1,0 +1,24 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:SudokuSolver.Assets.Controls">
+    <Design.PreviewWith>
+        <controls:UnderConstructionControl />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|UnderConstructionControl">
+        <!-- Set Defaults -->
+        <Setter Property="PageName" Value="Page" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid RowDefinitions="Auto, *"
+                      Margin="100">
+                    <TextBlock Grid.Row="0" HorizontalAlignment="Center">
+                        <Run Text="{TemplateBinding PageName}" />
+                        <Run Text="is under construction!" />
+                    </TextBlock>
+                    <Image Grid.Row="1" Source="{SvgImage ../Images/FluentRoadCone.svg}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+</Styles>

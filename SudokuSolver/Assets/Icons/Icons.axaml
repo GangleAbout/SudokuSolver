@@ -5,7 +5,7 @@
             <!-- Add Controls for Previewer Here -->
         </Border>
     </Design.PreviewWith>
-    
+
     <Style>
         <Style.Resources>
             <!-- REF: https://avaloniaui.github.io/icons.html -->
