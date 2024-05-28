@@ -12,5 +12,7 @@
     <Application.Styles>
         <FluentTheme />
         <StyleInclude Source="../Assets/Icons/Icons.axaml" />
+        <StyleInclude Source="../Assets/Styles/SplitViewToggleButtonStyle.axaml" />
+        <StyleInclude Source="../Assets/Controls/UnderConstructionControl.axaml" />
     </Application.Styles>
 </Application>

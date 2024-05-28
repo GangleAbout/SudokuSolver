@@ -39,7 +39,7 @@ public partial class ListItemTemplate
     {
         ViewModelType = viewModelType;
 
-        string viewModelName = viewModelType.Name.Replace("ViewModel", "");
+        var viewModelName = viewModelType.Name.Replace("ViewModel", "");
 
         Label = CamelCaseSplitRegex().Replace(viewModelName, " $1").Trim();
 
@@ -66,7 +66,7 @@ public partial class ListItemTemplate
     public StreamGeometry Icon { get; private set; }
 
     /// <summary>
-    /// Regex to split a CamelCase string into separate words
+    ///     Regex to split a CamelCase string into separate words
     /// </summary>
     /// <returns></returns>
     [GeneratedRegex("([A-Z])", RegexOptions.Compiled)]

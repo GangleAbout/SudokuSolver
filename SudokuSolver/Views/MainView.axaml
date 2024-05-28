@@ -14,10 +14,6 @@
         <viewModels:MainViewModel />
     </Design.DataContext>
 
-    <UserControl.Styles>
-        <StyleInclude Source="../Assets/Styles/SplitViewToggleButtonStyle.axaml" />
-    </UserControl.Styles>
-
     <SplitView IsPaneOpen="{Binding IsPaneOpen}"
                OpenPaneLength="180"
                CompactPaneLength="48"

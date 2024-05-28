@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="SudokuSolver/App.axaml" value="SudokuSolver/SudokuSolver.csproj" />
+        <entry key="SudokuSolver/Assets/Controls/UnderConstructionControl.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Assets/Icons/Icons.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Assets/Styles/SplitViewToggleButtonStyle.axaml" value="SudokuSolver/SudokuSolver.csproj" />
         <entry key="SudokuSolver/Views/HomeView.axaml" value="SudokuSolver/SudokuSolver.csproj" />
