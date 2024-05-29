@@ -1,9 +1,9 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:templates="clr-namespace:SudokuSolver.Templates"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewModels="using:SudokuSolver.ViewModels"
+             xmlns:models="clr-namespace:SudokuSolver.Models"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SudokuSolver.Views.MainView"
              x:DataType="viewModels:MainViewModel">
@@ -46,7 +46,7 @@
                              SelectionMode="Single"
                              SelectedIndex="{Binding SelectedItemIndex, Mode=TwoWay}">
                         <ListBox.ItemTemplate>
-                            <DataTemplate DataType="{x:Type templates:ListItemTemplate}">
+                            <DataTemplate DataType="{x:Type models:PaneListItem}">
                                 <StackPanel Margin="2,5,2,5"
                                             Spacing="15"
                                             Orientation="Horizontal">

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SudokuSolver.Templates;
+using SudokuSolver.Models;
 using SudokuSolver.ViewModels.Pages;
+
 
 namespace SudokuSolver.ViewModels;
 
@@ -13,12 +14,12 @@ public partial class MainViewModel : ViewModelBase
     /// <summary>
     ///     List of ListItemTemplates to be displayed
     /// </summary>
-    private static readonly List<ListItemTemplate> ItemTemplates =
+    private static readonly List<PaneListItem> ItemTemplates =
     [
-        new ListItemTemplate(typeof(HomeViewModel), "HomeRegular"),
-        new ListItemTemplate(typeof(ManualInputViewModel), "TableRegular"),
-        new ListItemTemplate(typeof(AutomaticInputViewModel), "CameraRegular"),
-        new ListItemTemplate(typeof(AboutViewModel), "InfoRegular")
+        new PaneListItem(typeof(HomeViewModel), "HomeRegular"),
+        new PaneListItem(typeof(ManualInputViewModel), "TableRegular"),
+        new PaneListItem(typeof(AutomaticInputViewModel), "CameraRegular"),
+        new PaneListItem(typeof(AboutViewModel), "InfoRegular")
     ];
 
     /// <summary>
@@ -39,7 +40,7 @@ public partial class MainViewModel : ViewModelBase
     /// <summary>
     ///     Selected ListItem in ListBox
     /// </summary>
-    [ObservableProperty] private ListItemTemplate? _selectedListItem;
+    [ObservableProperty] private PaneListItem? _selectedListItem;
 
     /// <summary>
     ///     MainWindow height
@@ -59,7 +60,7 @@ public partial class MainViewModel : ViewModelBase
     /// <summary>
     ///     ObservableCollection of ListBox items
     /// </summary>
-    public ObservableCollection<ListItemTemplate> Items { get; } = new(ItemTemplates);
+    public ObservableCollection<PaneListItem> Items { get; } = new(ItemTemplates);
 
     /// <summary>
     ///     Toggle SplitView pane open or closed
@@ -74,7 +75,7 @@ public partial class MainViewModel : ViewModelBase
     ///     On ObservableCollection change event
     /// </summary>
     /// <param name="value"></param>
-    partial void OnSelectedListItemChanged(ListItemTemplate? value)
+    partial void OnSelectedListItemChanged(PaneListItem? value)
     {
         if (value is null) return;
 
